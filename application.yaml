@@ -8,6 +8,7 @@ spec:
   source:
     repoURL: https://github.com/thgtvcaptain/GoGrpcRestApp.git
     targetRevision: HEAD
+    path: /
   destination:
     server: https://kubernetes.default.svc
     namespace: managementapp
