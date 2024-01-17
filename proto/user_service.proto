@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "/protoUserManagement/proto";
+
+import "user.proto";
+
+service UserService {
+
+  rpc LoginUser(LoginRequest) returns (LoginResponse) {}
+
+  rpc ChangePassword(ChangePasswordRequest) returns (ChangePasswordResponse) {}
+
+  rpc GetAllUsers(NoParam) returns (stream GetUserResponse) {}
+
+  rpc ListUsers(stream GetUserRequest) returns (stream GetUserResponse) {}
+
+  rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+
+  rpc AddUser(AddUserRequest) returns (GetUserResponse) {}
+
+  rpc UpdateUser(UpdateUserRequest) returns (GetUserResponse) {}
+
+  rpc DeleteUser(stream DeleteUserRequest) returns (DeleteUserResponse) {}
+
+}
